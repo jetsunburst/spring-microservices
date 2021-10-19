@@ -13,6 +13,13 @@
 
 <img src="currency-conversion.JPG" width="650" >
 
+## 2. Name Server and Load Balancer(Client Side) Microservice
+> - All instances of the  microservices will be regiestered with naming server.
+> - Naming server provies all the active instances and load balances between them.
+> - No need to hardcore the foregin service address in calling service 
+
+<img src="NameServer.JPG" width="650" >
+
 ## Ports
 | Application      | Port |
 | ----------- | ----------- |
@@ -25,6 +32,7 @@
 | Currency Converter Service - Direct Call      | http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10        |
 | Currency Converter Service - Feign   | http://localhost:8100/currency-conversion-feign/from/EUR/to/INR/quantity/10000        |
 | Currency Exchange Service  | http://localhost:8000/currency-exchange/from/EUR/to/INR , http://localhost:8001/currency-exchange/from/EUR/to/INR         |
+|Eureka	| http://localhost:8761/ |
 
 ## VM Argument
 -Dserver.port=8001
